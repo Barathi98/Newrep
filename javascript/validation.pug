@@ -1,0 +1,29 @@
+html 
+head 
+script. 
+  function validateform(){  
+    var name=document.myform.name.value;  
+    var password=document.myform.password.value;  
+      
+    if (name==null || name==""){  
+      alert("Name can't be blank");  
+      return false;  
+    }else if(password.length<6){  
+      alert("Password must be at least 6 characters long.");  
+      return false;  
+      }  
+    let constraints = "^[A-Za-z]\w{7,15}$";
+    let result = constraints.test(password);
+      }  
+     
+body
+    form(name='myform', method='post', action='https://www.javatpoint.com/javascript-form-validation', onsubmit='validateform()')
+      | Name: 
+      input(type='text', name='name')
+      br
+      | Password: 
+      input(type='password', name='password')
+      br
+      input(type='submit', value='register')   
+
+

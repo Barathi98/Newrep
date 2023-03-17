@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetElement</title>
+</head>
+<body>
+ <!-- getElementById -->
+ <h2>getElementById</h2>
+    <script>
+        function getcube()
+        {
+            var number=document.getElementById("cube").value;
+            alert(number*number*number)
+        }
+    </script>
+    <form>
+        Enter number<input type="text" id="cube" name="cubes" /> <br>
+        <input type="button" value="cube" onclick="getcube()"/>
+    </form>
+<!-- getElmentByClass -->
+<h2>getElmentByClass</h2>
+<div class="getbyClass">
+     This is a simple class implementation
+     <script>
+        function getsquare(){
+            var x=document.getElementsByClassName('getbyClass')
+            document.write('this is an example for get by class name'+x)
+        }
+        </script>
+    
+</div>
+<!-- get element by name -->
+ <h2>getElementsByName </h2>
+<div>
+    <script>
+        function totalElements()
+        {
+            var allGenders=document.getElementsByName('gender');
+            document.write("Total genders are"+allGenders.length)
+        }
+    </script>
+    
+    <form>
+        male: <input type="radio" name="gender" value="male">
+        female: <input type="radio" name="gender" value="female">
+        <input type="button" onclick="totalElements()" value="TotalGenders">
+    </form>
+</div>
+<h2>get Element by tag name</h2>
+<div>
+    <script>
+        function countPara(){
+            var totalPara=document.getElementsByTagName('p')
+            alert("total p tags are:"+totalPara.length)
+        }
+    </script>
+    <p>This is a p tag</p>
+    <p>P means paragraph</p>
+    <p>It is used to diplay paragraphs</p>
+    <p>Here, we are going to count how many p tags are present here</p>
+    <button onclick="countPara()">countParagraph</button>
+</div>
+</body>
+</html>

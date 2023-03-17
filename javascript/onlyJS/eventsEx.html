@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Events</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"> </script> 
+    <script>   
+    function clickEvent(){
+            alert("this is click event")
+        }
+
+    function mouseOverEvent(){
+        alert('this is mouse over event')
+    }  
+    
+    function focusEvent(){
+        document.getElementById('input').style.background="HotPink";
+    }
+
+    function keyDownEvent(){
+       var a= document.getElementById('input1')
+       alert("you pressed a key")
+    }
+     </script>
+    <form>
+        <input type="button" value="click me" class="btn btn-success" onclick="clickEvent()">
+        
+    </form>
+    <br>
+    <br>
+    <p onmouseover="mouseOverEvent()">keep the cursor over me</p>
+    <br>
+    <h4>Enter your name here</h4>
+    <input type="text" id="input" onfocus="focusEvent()"/>
+    <h4> Enter something here for key down event</h4>  
+    <input type="text" id="input1" onkeydown="keyDownEvent()"/>  
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>innerhtml</title>
+</head>
+<body>
+    <script type="text/javascript" >  
+        function showSignupForm() {  
+        var data="UserName:<br><input type='text' name='name'><br>Password:<br><input type='password' name='pwd' onkeyup=validate()><br>  Strength:<span id='spand'>no strength</span> <br>Confirm Password:<br><input type='password' name='cpwd'><br><input type='submit' value='signup'>";  
+        
+        document.getElementById('signup').innerHTML=data;  
+  function validate()      {
+var msg;  
+if(document.myForm.pwd.value.length>5){  
+msg="good";  
+}  
+else{  
+msg="poor";  
+}  
+document.getElementsByName('spand').innerText=msg;  
+ }
+}  
+         
+          
+        </script>  
+        <form name="myForm" action="/date.html">  
+        <input type="button" value="Signup" onclick="showSignupForm()">  
+      
+        <div id="signup"></div>    
+        </form>    
+    </body>
+    </html>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object</title>
+</head>
+<body>
+
+Sqaure root of 17 is:  <span id="sq"></span> <br>
+random number is: <span id="rand"></span> <br>
+Round of 4.3 is: <span id="p6"></span> <br>    
+maximum of given numbers is: <span id="p7"></span> <br>
+minimum of given numbers is: <span id="p8"></span> 
+<script>
+document.getElementById('sq').innerHTML=Math.sqrt(17); 
+document.getElementById('rand').innerHTML=Math.random();
+document.getElementById('p6').innerHTML=Math.round(4.3); 
+document.getElementById('p7').innerHTML=Math.max(1.25,2.0,35.23,58.36,55.56,52.14,21.2351);
+document.getElementById('p8').innerHTML=Math.min(1.25,2.0,35.23,58.36,55.56,52.14,21.2351)
+</script>
+</body>
+</html>

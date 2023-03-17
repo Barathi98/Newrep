@@ -1,0 +1,19 @@
+html 
+head 
+ h2 Click here delete the record
+title Confirm 
+body 
+ script.  
+  function msg()
+  {
+    var v = confirm("are you sure to delete?");
+    if(v==true)
+    {
+        alert("record deleted");
+    }
+    else 
+    {
+        alert("you cancelled to delete the record");
+    }
+  }
+input(type="button", value="delete record", onclick="msg()")  

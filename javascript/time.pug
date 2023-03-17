@@ -1,0 +1,26 @@
+html
+  head
+  body
+    | | Current Time:
+     span#txt
+     script.
+     window.onload=function(){getTime();}
+     function getTime(){
+     var today=new Date();
+     var h=today.getHours();
+     var m=today.getMinutes();
+     var s=today.getSeconds();
+//  add a zero in front of numbers&lt;10 
+m=checkTime(m);
+s=checkTime(s);
+ document.getElementById(&apos;txt&apos;).innerHTML=h+&quot;:&quot;+m+&quot;:&quot;+s;
+ setTimeout(function(){getTime()},1000);
+ }
+  //setInterval(&quot;getTime()&quot;,1000);//another way
+function checkTime(i){
+if (i&lt;10){
+ i=&quot;0&quot; + i;
+ }
+  return i;
+   }
+    

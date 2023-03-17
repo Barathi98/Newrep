@@ -1,0 +1,16 @@
+html
+  head
+    script(type='text/javascript').
+      function getcube(){
+      var number=document.getElementById("number").value;
+      alert(number*number*number);
+      }
+      
+  body
+    form
+      | Enter No:
+      input#number(type='text', name='number')
+      br
+      input(type='button', value='cube', onclick='getcube()')
+      
+
